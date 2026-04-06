@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Data – do not commit raw DICOM or HDF5 files
+data/
+*.dcm
+*.h5
+*.hdf5
+*.zip
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Test / coverage artefacts
+.pytest_cache/
+.coverage
+htmlcov/

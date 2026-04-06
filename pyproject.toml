@@ -1,0 +1,34 @@
+[project]
+name = "subtle-medical-challenge"
+version = "0.1.0"
+description = "Subtle Medical coding challenge – DICOM I/O and fast acquisition simulation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydicom>=2.3.0,<3.0.0",
+    "h5py>=3.7.0,<4.0.0",
+    "numpy>=1.23.0,<2.0.0",
+    "scipy>=1.9.0,<2.0.0",
+    "matplotlib>=3.6.0,<4.0.0",
+]
+
+[tool.uv]
+# Exclude packages released after this date to mitigate supply-chain / malware
+# risks from freshly-published packages (see: uv exclude-newer docs).
+exclude-newer = "2026-01-01T00:00:00Z"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["subtle*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
