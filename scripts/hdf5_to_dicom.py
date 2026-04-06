@@ -33,7 +33,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from subtle.dicom_io import build_volume, load_dicom_series, rescale_volume, save_dicom_series
+from util.dicom_io import build_volume, load_dicom_series, rescale_volume, save_dicom_series
 
 
 # ---------------------------------------------------------------------------

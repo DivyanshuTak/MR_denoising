@@ -15,7 +15,7 @@ from unittest.mock import MagicMock, patch
 import numpy as np
 import pytest
 
-from subtle.dicom_io import VolumeStats, build_volume, load_dicom_series, rescale_volume
+from util.dicom_io import VolumeStats, build_volume, load_dicom_series, rescale_volume
 
 
 # ---------------------------------------------------------------------------
@@ -167,7 +167,7 @@ class TestLoadDicomSeries:
             ds.filename = path
             return ds
 
-        with patch("subtle.dicom_io.pydicom.dcmread", side_effect=_mock_dcmread):
+        with patch("util.dicom_io.pydicom.dcmread", side_effect=_mock_dcmread):
             result = load_dicom_series(tmp_path)
 
         locs = [float(ds.SliceLocation) for ds in result]

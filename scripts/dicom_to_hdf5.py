@@ -34,7 +34,7 @@ import h5py
 # package (e.g. `python scripts/dicom_to_hdf5.py ...`).
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from subtle.dicom_io import build_volume, load_dicom_series
+from util.dicom_io import build_volume, load_dicom_series
 
 
 # ---------------------------------------------------------------------------

@@ -11,7 +11,7 @@ analytically known properties.
 import numpy as np
 import pytest
 
-from subtle.simulation import blurring3d
+from util.simulation import blurring3d
 
 
 class TestBlurring3d:
